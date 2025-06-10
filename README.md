@@ -36,8 +36,27 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Features
 - Skip size selection with price and details
-- Contact information and copyright
-- Responsive design
+- Responsive design (mobile & desktop)
+- Toast notifications and modern UI components
+- Uses **React Query** for efficient data fetching/caching
+- Styled with **Bootstrap CSS** for fast, responsive layouts
+- Error handling and user feedback
+
+## Required Packages
+
+After cloning, run `npm install` to install all dependencies. Key packages used:
+
+- **react**, **react-dom** – UI library
+- **react-router-dom** – Routing
+- **@tanstack/react-query** – Data fetching/caching
+- **bootstrap** – UI styling
+- **@radix-ui/react-toast**, **@radix-ui/react-slot**, **@radix-ui/react-tooltip**, **@radix-ui/react-avatar**, **@radix-ui/react-alert-dialog**, **@radix-ui/react-aspect-ratio** – UI primitives
+- **framer-motion** – Animations
+- **lucide-react** – Icons
+- **sonner** – Toast notifications
+- **tailwindcss**, **tailwind-merge**, **clsx**, **class-variance-authority** – Utility-first CSS and class management
+
+All dependencies are installed automatically with `npm install`.
 
 ## Learn More
 - [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
