@@ -1,0 +1,115 @@
+/* Dark mode support */
+@media (prefers-color-scheme: white) {
+  :root {
+    --background: #18181b;
+    --foreground: #f1f5f9;
+    --card: #18181b;
+    --card-foreground: #f1f5f9;
+    --popover: #18181b;
+    --popover-foreground: #f1f5f9;
+    --primary: #f1f5f9;
+    --primary-foreground: #1e293b;
+    --secondary: #23272f;
+    --secondary-foreground: #f1f5f9;
+    --muted: #23272f;
+    --muted-foreground: #a1a1aa;
+    --accent: #23272f;
+    --accent-foreground: #f1f5f9;
+    --destructive: #991b1b;
+    --destructive-foreground: #f1f5f9;
+    --border: #23272f;
+    --input: #23272f;
+    --ring: #cbd5e1;
+    --sidebar-background: #181a1a;
+    --sidebar-foreground: #f5f6fa;
+    --sidebar-primary: #2563eb;
+    --sidebar-primary-foreground: #fff;
+    --sidebar-accent: #23242a;
+    --sidebar-accent-foreground: #f5f6fa;
+    --sidebar-border: #23242a;
+    --sidebar-ring: #3b82f6;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  .skip-cards-row > * {
+    border-color: #f1f5f9;
+    background: #23272f;
+    color: #f1f5f9;
+  }
+  .skip-help-section {
+    background:#f1f5f9;
+    color: #f1f5f9;
+  }
+}
+
+.hover-effect {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1), transform 0.3s cubic-bezier(.4,0,.2,1);
+  border: 1px solid var(--hover-border);
+  background-color: var(--hover-bg);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.hover-effect::before,
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--hover-anim);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hover-effect::before {
+  top: 0;
+  left: -100%;
+  transition: left 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.hover-effect:hover::before,
+.hover-effect:focus-visible::before {
+  left: 0;
+}
+
+.hover-effect::after {
+  bottom: 0;
+  right: -100%;
+  left: auto;
+  transition: right 0.5s cubic-bezier(.4,0,.2,1) 0.5s;
+}
+
+.hover-effect:hover::after,
+.hover-effect:focus-visible::after {
+  right: 0;
+}
+
+.hover-effect:hover,
+.hover-effect:focus-visible {
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.10);
+  transform: translateY(-4px);
+}
+
+/* Optional: focus ring for accessibility */
+.hover-effect:focus-visible {
+  outline: 2px solid var(--hover-anim);
+  outline-offset: 2px;
+}
+
+.toast-lg {
+  min-width: 350px;
+  max-width: 500px;
+  font-size: 1.25rem;
+  padding: 2rem 2.5rem;
+}
+
+.custom-gradient {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: white;
+}
